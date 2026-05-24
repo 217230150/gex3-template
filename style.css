@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'AnimeTitle';
+  src: url('assets/fonts/Luna.ttf') format('truetype');
+}
+
+.bg-forest {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('assets/bg-totoro.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.brand-heading {
+  font-family: 'AnimeTitle', sans-serif;
+  /* HSL Colors */
+  color: hsl(120, 83%, 80%);
+  text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.5);
+}
+
+.custom-accordion {
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid hsla(0, 0%, 100%, 0.5);
+  box-shadow: 0 4px 15px hsla(0, 0%, 0%, 0.3);
+  overflow: hidden;
+}
+
+.acc-box {
+  background-color: hsla(0, 0%, 0%, 0.3);
+  border: none;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+}
+
+.acc-box:last-of-type {
+  border-bottom: none;
+}
+
+.accordion-header {
+  background: transparent;
+}
+
+/* Using general sibling combinator logic indirectly via :first-child / :nth-child */
+.acc-box:first-child .accordion-button { background-image: url('assets/acc-bg1.png'); }
+.acc-box:nth-child(2) .accordion-button { background-image: url('assets/acc-bg2.png'); }
+.acc-box:nth-child(3) .accordion-button { background-image: url('assets/acc-bg3.png'); }
+.acc-box:nth-child(4) .accordion-button { background-image: url('assets/acc-bg4.png'); }
+.acc-box:last-child .accordion-button { background-image: url('assets/acc-bg5.png'); }
+
+.accordion-button {
+  background-color: transparent !important;
+  color: hsl(39, 77%, 83%) !important;
+  font-family: 'AnimeTitle', sans-serif;
+  font-size: 1.5rem;
+  border: none;
+  box-shadow: none !important;
+  padding: 20px;
+  background-position: center;
+  background-size: cover;
+}
+
+.accordion-button::after {
+  filter: invert(1);
+}
+
+.accordion-button:not(.collapsed) {
+  color: hsl(120, 83%, 80%) !important;
+  background-color: transparent !important;
+}
+
+.body-tint {
+  background-color: hsl(39, 85%, 95%);
+  color: hsl(0, 0%, 20%);
+  padding: 20px;
+}
+
+.field-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 20%);
+  cursor: pointer;
+}
+
+.field-style {
+  border-radius: 5px;
+  border: 1px solid hsl(0, 0%, 80%);
+  padding: 8px 12px;
+}
+
+.field-style:focus {
+  border-color: hsl(122, 39%, 49%);
+  box-shadow: 0 0 0 0.2rem hsla(122, 39%, 49%, 0.25);
+}
+
+.loc-card {
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.loc-active {
+  border: 4px solid hsl(122, 39%, 49%) !important;
+}
+
+.call-to-action {
+  font-family: 'AnimeTitle', sans-serif;
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(146, 50%, 36%);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 30px;
+  transition: 0.3s;
+}
+
+.call-to-action:hover {
+  background-color: hsl(146, 55%, 27%);
+  color: hsl(0, 0%, 100%);
+}
+
+.warn-msg {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85em;
+  color: hsl(359, 44%, 46%);
+}
+
+.error-banner {
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: hsl(359, 44%, 46%);
+  background-color: hsl(350, 100%, 88%);
+}
+
+.dl-card {
+  background-color: hsl(123, 46%, 94%);
+  border-radius: 10px;
+}
+
+.dl-format dt, .dl-format dd, .dl-format li {
+  font-size: 0.9rem;
+}
